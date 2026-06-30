@@ -52,3 +52,8 @@
 collectors/manager.py の上部のコメントアウトされている from collectors.qiita.article import ArticleCollector を有効化する。
 同じく manager.py の COLLECTOR_REGISTRY 辞書の "qiita" のリストに ArticleCollector を追加する。
 これで、マネージャーの collect_by_source({"github": "owner/repo", "qiita": "記事ID"}) を使って、GitHubとQiitaを並行して一気に情報収集できるようになります！
+
+
+
+
+No アプリ名 役割 1 スクレイピングアプリ Web・GitHub・PDF収集 2 クリーニングアプリ ノイズ除去 3 JSON変換アプリ 構造化 4 Embedding作成アプリ ベクトル化 5 DB管理アプリ ChromaDB等 6 検索エンジン RAG検索 7 Intent Inspector 質問分類 8 Snippet Engine 関連知識抽出 9 Handler Router 専門AI振り分け 10 HTML生成AI HTML生成 11 CSS生成AI CSS生成 12 JS生成AI JS生成 13 評価AI 出力チェック 14 修正AI 自己修正 15 会話メモリ管理 記憶
